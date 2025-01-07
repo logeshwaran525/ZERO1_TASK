@@ -1,12 +1,12 @@
 
 import express from 'express';
-// apiserver/Router/AuthRoute.js
-import { validation } from '../Controllers/SignupController.js'; // Ensure the path is correct
-
+import {SignUp,login} from '../Controllers/SignupController.js';
+import { validation } from '../Controllers/ValidationContrillers.js';
 
 const AuthRoute = express();
 
-AuthRoute.get("/validation", validation); // Route for validation
-/* AuthRoute.get("/login", Login); // Route for login */
+AuthRoute.get("/SignUp", SignUp); 
+AuthRoute.get("/login", login); 
+AuthRoute.get("/valid",validation)
 
-export default AuthRoute; // Export the router
+export default AuthRoute;
